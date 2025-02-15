@@ -6,7 +6,7 @@ test("API Test - Get Method", async ({ request }) => {
   console.log(await resp.json());
 
   //Assertion status code to be 200
-  expect(resp.status()).toBe(201);
+  expect(resp.status()).toBe(200);
 
   //   expect(await resp.json()).toMatchObject({
   //     page: 2,
