@@ -28,22 +28,24 @@ export default defineConfig({
     /* Base URL to use in actions like `await page.goto('/')`. */
     // baseURL: 'http://127.0.0.1:3000',
 
-    baseURL: "https://reqres.in/",
+    baseURL: "https://reqres.in",
     extraHTTPHeaders: {
-      "Accept": "applications/json",
+      Accept: "applications/json"
     },
 
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
     trace: "on-first-retry",
     headless: false,
+    screenshot: "only-on-failure",
+    video: "on"
   },
 
   /* Configure projects for major browsers */
   projects: [
     {
       name: "chromium",
-      use: { ...devices["Desktop Chrome"] },
-    },
+      use: { ...devices["Desktop Chrome"] }
+    }
 
     // {
     //   name: 'firefox',
@@ -74,7 +76,7 @@ export default defineConfig({
     //   name: 'Google Chrome',
     //   use: { ...devices['Desktop Chrome'], channel: 'chrome' },
     // },
-  ],
+  ]
 
   /* Run your local dev server before starting the tests */
   // webServer: {
